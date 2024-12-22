@@ -1,0 +1,199 @@
+/* Basic reset and font setup */
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+/* Header */
+header {
+  background: #30475e;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Navigation Bar */
+nav {
+  background: #f2a365;
+  display: flex;
+  justify-content: center;
+}
+nav a {
+  margin: 0 1rem;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  background-color: #d98c56;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Main content area */
+main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+/* Section for upload & configure */
+section {
+  flex: 1;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  color: #30475e;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input[type="file"],
+select,
+input[type="text"],
+input[type="number"] {
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Checkboxes */
+.checkbox-group {
+  margin: 1rem 0;
+}
+
+.checkbox-group label {
+  display: inline-block;
+  margin-right: 1rem;
+  font-weight: normal;
+}
+
+/* Buttons */
+button {
+  background-color: #30475e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+button:hover {
+  background-color: #222831;
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.progress-fill {
+  height: 100%;
+  width: 60%; /* Example progress */
+  background-color: #f2a365;
+  border-radius: 10px;
+  transition: width 0.5s;
+}
+
+/* Sidebar */
+aside {
+  background: #ffffff;
+  min-width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  height: fit-content;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.panel-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #30475e;
+}
+
+/* Results Section */
+.results-section {
+  margin: 2rem;
+}
+
+.results-section h2 {
+  margin-bottom: 1rem;
+  color: #30475e;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.image-card {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.image-card h4 {
+  color: #30475e;
+  margin-bottom: 0.5rem;
+}
+
+.image-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+/* Export button styling */
+.export-btn {
+  background-color: #30475e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.export-btn:hover {
+  background-color: #222831;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #30475e;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

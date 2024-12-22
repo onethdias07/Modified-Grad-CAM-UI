@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Modified Grad-CAM Prototype</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>Modified Grad-CAM Prototype</header>
+  
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Upload</a>
+    <a href="#">Progress</a>
+    <a href="#">Results</a>
+    <a href="#">Settings</a>
+  </nav>
+  
+  <main>
+    <section>
+      <h2>Upload & Configure</h2>
+      <label for="file-upload">Upload Medical Image(s)</label>
+      <input type="file" id="file-upload" multiple>
+      
+      <label for="model-select">Select Model</label>
+      <select id="model-select">
+        <option>Max-DeepLab v1</option>
+        <option>Max-DeepLab v2</option>
+        <option>Other Model</option>
+      </select>
+      
+      <div class="checkbox-group">
+        <strong>Grad-CAM Settings:</strong><br>
+        <label><input type="checkbox" checked> Instance-Specific Gradients</label>
+        <label><input type="checkbox" checked> High-Resolution Activation Mapping (HRAM)</label>
+      </div>
+      
+      <label for="opacity-slider">Heatmap Opacity (0-1):</label>
+      <input type="number" id="opacity-slider" min="0" max="1" step="0.1" value="0.5">
+      
+      <button>Start Process</button>
+      
+      <hr>
+      <h2>Progress</h2>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <p>Processing 3 / 5 images...</p>
+    </section>
+    
+    <aside>
+      <div class="panel-title">Status Logs</div>
+      <ul>
+        <li>Loading image1.dcm...</li>
+        <li>Preprocessing complete!</li>
+        <li>Generating feature maps...</li>
+        <li>Computing Grad-CAM...</li>
+      </ul>
+      
+      <hr>
+      
+      <div class="panel-title">Quick Tips</div>
+      <p>Check "Instance-Specific Gradients" to ensure saliency maps are unique to each image.</p>
+      <p>Try adjusting HRAM for improved spatial detail on small lesions.</p>
+    </aside>
+  </main>
+  
+  <section class="results-section">
+    <h2>Results & Visualization</h2>
+    <div class="results-grid">
+      <div class="image-card">
+        <h4>Original Image</h4>
+        <img src="https://via.placeholder.com/300" alt="Original Medical Scan">
+      </div>
+      <div class="image-card">
+        <h4>Modified Grad-CAM Overlay</h4>
+        <img src="https://via.placeholder.com/300/FF604F/FFFFFF" alt="Grad-CAM Heatmap">
+      </div>
+    </div>
+    <button class="export-btn">Export Report</button>
+  </section>
+
+  <footer>
+    © 2024 Modified Grad-CAM Prototype
+  </footer>
+</body>
+</html>
